@@ -37,10 +37,20 @@ Base* getBaseObject(bool derivedObject) {
 }
 
 int main() {
+
+    Base* base{getBaseObject(true)};
+    base->printValue();
+
+    Derived* derived{dynamic_cast<Derived*>(base)};
+    std::cout << derived -> getName() << '\n';
+    derived -> printValue();
+
     Derived d{1, "Orange"};
     Base& b{d};
 
     Derived& ref{dynamic_cast<Derived&>(b)};
     std::cout << ref.getName();
+
+    delete base;
     return 0;
 }

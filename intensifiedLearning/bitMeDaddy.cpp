@@ -9,7 +9,7 @@ void someFunction(std::bitset<32> options) {
 int main()
 {
     // this is bit manipulation using bitset and its functions
-    // but what if we want to do this for multiple bits use (bit masks)
+    // but what if we wanted to do this for multiple bits use (bit masks)
 
     std::bitset<4> name{0b1010};
     //std::cout << name.set(2) << "\n";
