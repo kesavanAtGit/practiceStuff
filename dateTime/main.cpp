@@ -7,8 +7,7 @@
 #include <utility>
 #include <algorithm>
 
-class calculate_time
-{
+class calculate_time {
 private:
     // using type aliases
     using Clock = std::chrono::steady_clock;
@@ -28,16 +27,15 @@ public:
 
 const std::time_t totalArrayElements{10000};
 
-void sortArray(std::array<int, totalArrayElements>& array)
-{
-    for(std::size_t startIndex{0}; startIndex < totalArrayElements - 1; ++startIndex)
-    {
+void sortArray(std::array<int, totalArrayElements>& array) {
+
+    for(std::size_t startIndex{0}; startIndex < totalArrayElements - 1; ++startIndex) {
         std::size_t smallestIndex{0};
-        for(std::size_t currentIndex{ startIndex + 1}; currentIndex < totalArrayElements; ++currentIndex)
-        {
+        for(std::size_t currentIndex{ startIndex + 1}; currentIndex < totalArrayElements; ++currentIndex) {
             if(array[currentIndex] < array[startIndex])
                 smallestIndex =  currentIndex;
         }
+
         std::swap(array[startIndex], array[smallestIndex]);
     }
 }

@@ -4,10 +4,10 @@
 #include <cassert>
 #include <cstddef>
 
-class String
-{
+class String {
 private:
     std::size_t m_length{};
+    // c style string
     char* m_str{};
 
 public:
@@ -32,6 +32,7 @@ public:
         }
     }
 
+    // copy constructor
     String(const String& str) {
         deepCopy(str);
     }
@@ -50,7 +51,7 @@ public:
 };
 
 int main() {
-    String str{"ay mi amor"};
+    String str{"sujith"};
     std::cout << str.getStr() << "\n";
 
     String anotherStr = str;

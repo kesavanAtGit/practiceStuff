@@ -11,11 +11,13 @@ private:
 public:
     // default constructor
     array_daddy(std::size_t size):
-        m_size{size}, m_array{(m_size? new int[m_size]: nullptr)} {}
+        m_size{size},
+        m_array{(m_size? new int[m_size]: nullptr)} {}
 
     // copy constructor
     array_daddy(const array_daddy& daddyArray):
-        m_size{daddyArray.m_size}, m_array{(m_size? new int[m_size]: nullptr)} {
+        m_size{daddyArray.m_size},
+        m_array{(m_size? new int[m_size]: nullptr)} {
             std::cout << "I am a copy constructor baby! \n";
         }
 
